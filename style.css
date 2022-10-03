@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+:root {
+  --bg-color: hsl(225,6%,13%);
+  --search-bg: hsl(225,4%,20%);
+  --btn-bg: hsl(217,89%,76%);
+  --action-btn-bg: hsl(230,4%,29%);
+  --anchor-tags:  hsl(215,89%,74%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  background: var(--bg-color);
+  color: white;
+  animation: impact 6s ease-in-out forwards;
+}
+
+/* main {
+  display: none;
+} */
+
+.search {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--anchor-tags);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.blast {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  /* background: url(/public/satellite.png); */
+  animation: travel 6s linear;
+  background-size: cover;
+}
+
+@keyframes travel {
+    0% {
+      translate: -100vw;
+      background: url(/public/satellite.png);
+    }
+
+    49% {
+      background: url(/public/satellite.png);
+    }
+
+    50% {
+      translate: 0;
+      background: url(/public/blast.png);
+    }
+
+    60% {
+      background: url(/public/blast.png);
+    } 
+}
+
+@keyframes impact{
+    0% {
+      rotate: 0deg;
+    }
+
+    50% {
+      rotate: 0deg;
+    }
+
+    55% {
+      rotate: 1deg;
+    }
+
+    60% {
+      rotate: 2deg;
+    }
+
+    100% {
+      rotate: 2deg;
+    }
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2.5rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+}
+
+header nav .search-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  background-color: var(--search-bg);
+  border-radius: 50px;
+  padding: 0 0.5rem;
+}
+
+.search-cont > input {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: var(--search-bg);
+  font-size: larger;
+  color: white;
+}
+
+.search-cont > .icons {
+  display: flex;
+  gap: 0.7rem;
+}
+
+header .last {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+header .last .sign-in {
+  background-color: var(--btn-bg);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+header .last .sign-in:hover {
+  background-color: white;
+}
+
+.settings, .apps {
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
+.settings:hover, .apps:hover {
+  background-color: var(--search-bg);
+}
+
+main {
+  margin: auto;
+  width: 70%;
+}
+
+main nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+main nav > .links {
+  display: flex;
+  gap: 2.3rem;
+}
+
+main nav .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.about .more {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about .more > img {
+  width: 5rem;
+}
+
+.text h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.text .more-info {
+  display: flex;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.more .btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns .action-btn {
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--action-btn-bg);
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.top-stories {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.stories h3 {
+  font-weight: 400;
+}
+
+.stories .news {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.news-one, .news-two {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nasa, .ht-tech, .bbc, .cnn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nasa > img, .ht-tech > img, .bbc > img, .cnn > img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.3rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.head > img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.head h1 {
+  font-size: 0.8rem;
+}
+
+.aside {
+  width: 30%;
+}
+
+.aside .images {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.aside .about {
+  width: 130%;
+}
